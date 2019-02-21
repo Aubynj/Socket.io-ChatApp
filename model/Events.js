@@ -1,3 +1,9 @@
+/**
+ * Chat Application by AubynJ
+ * License under MIT & SAGA (Swedish Ason Group) AB
+ * Uploaded on Thu Feb 21, 16:07:08
+ */
+
 module.exports = {
     USER_CONNECTED : 'connection',
     USER_DISCONNECTED : 'disconnect',

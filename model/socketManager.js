@@ -1,3 +1,9 @@
+/**
+ * Chat Application by AubynJ
+ * License under MIT & SAGA (Swedish Ason Group) AB
+ * Uploaded on Thu Feb 21, 16:07:08
+ */
+
 const io = require('../server').io
 const sessionApp = require('../server').sessionApp
 const EVENTS =  require('./Events')
@@ -11,9 +17,6 @@ module.exports =  (socket) => {
     let sessionNickname = sess.nickname
     socket.username = sessionNickname
     socket.join(EVENTS.ROOM)
-    // getUserId(sessionNickname, (user)=>{
-    //     console.log(user.user_id)
-    // })
 
     showPreviousGroupMessage(EVENTS.ROOM, con)
     
@@ -191,3 +194,4 @@ module.exports =  (socket) => {
         return getTime.toString().slice(0, -14).trim()
     }
 }
+

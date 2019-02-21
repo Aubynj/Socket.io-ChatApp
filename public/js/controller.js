@@ -1,3 +1,9 @@
+/**
+ * Chat Application by AubynJ
+ * License under MIT & SAGA (Swedish Ason Group) AB
+ * Uploaded on Thu Feb 21, 16:07:08
+ */
+
 $(function(){
     const SERVER_URL = {
         SIGN_UP_URL : "/sign_up",

@@ -1,3 +1,9 @@
+/**
+ * Chat Application by AubynJ
+ * License under MIT & SAGA (Swedish Ason Group) AB
+ * Uploaded on Thu Feb 21, 16:07:08
+ */
+
 const express = require('express')
 const app = express()
 const path = require('path')
@@ -36,6 +42,7 @@ console.log("Server running at PORT ", 3000)
 
 io.on(ConEvent.USER_CONNECTED, SocketManager)
 
+// Get method for user chat dashboard
 app.get('/Chat', (req, res) => {
     sessionApp = req.session
     // console.log(sessionApp)
@@ -46,7 +53,7 @@ app.get('/Chat', (req, res) => {
     }   
 })
 
-
+// Get method for landing page
 app.get("/", (req, res) => {
     sessionApp = req.session
     if (sessionApp.uniqueID){
@@ -57,18 +64,18 @@ app.get("/", (req, res) => {
     // res.sendFile(__dirname + '/index.html')
 });
 
-app.get("/password", (req, res) => {
-    res.sendFile(__dirname + '/password.html')
-});
 
-app.get('/drag', (req, res) => {
-    res.sendFile(__dirname + '/Chat/drag.html')
-})
+// app.get("/password", (req, res) => {
+//     res.sendFile(__dirname + '/password.html')
+// });
 
+
+// Get method for redirecting to Registration page
 app.get("/join", (req, res) => {
     res.sendFile(__dirname + "/join.html")
 })
 
+// Post method for signing in user
 app.post("/sign_in", (req, res) => {
     sessionApp = req.session
     let email = req.body.email
@@ -94,13 +101,14 @@ app.post("/sign_in", (req, res) => {
     })
 })
 
+// Get method for login out user
 app.get('/Logout', (req, res) => {
     req.session.destroy()
     res.session = null
     res.redirect('/')
 })
 
-
+// Post method for signing up
 app.post("/sign_up", (req, res) => {
     let nickname = req.body.nickname
     let email = req.body.email
@@ -132,23 +140,7 @@ app.post("/sign_up", (req, res) => {
 })
 
 
-// app.get('/Process', (req, res) => {
-//     req.session.destroy()
-//     res.session = null
-//     res.redirect('/')
-
-//     if (sessionApp.uniqueID) {
-//         setTimeout(()=>{
-//             res.redirect('/Chat')
-//         }, 3000)
-//     } else {
-//         res.redirect('/')
-//     }
-// })
-
-
-
-
+// Functions to check if nickname and email exist in mysql db
 function checkEmailAndNickname(email, nick, con, callback) {
     // Connect to mysql DB
     con.query("SELECT * FROM users WHERE email = ? or nickname = ?", [email, nick], function(err, rows, fields){
@@ -160,6 +152,7 @@ function checkEmailAndNickname(email, nick, con, callback) {
     })  
 }
 
+// Functions to get current date and time
 function getCurrentDateAndTime(){
     let date = new Date()
     let getTime = new Date(date.getTime())
