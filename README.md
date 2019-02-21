@@ -50,7 +50,7 @@ Start the server with the command below. But before that, make sure [Nodemon](ht
 ```bash
 nodemon server.js
 ```
-That is it! Feel free to improve on my code if you really want to want to upgrade some functionality
+That is it! Feel free to improve on my code if you really want to upgrade some functionality
 ### Happy Coding :)
 
 ### Authors
