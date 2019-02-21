@@ -45,12 +45,13 @@ CREATE TABLE messages(
 ```
 We are done with the database structure of the project. In the project directory, a folder name model contain
 the connection.js for the connection to MYSQL Database Server. Go ahead and change the require variables to the connection
-Start the server with the command below. But before that, make sure [nodemon]()
+Start the server with the command below. But before that, make sure Nodemon is installed globally
 
 ```bash
 nodemon server.js
 ```
-
+That is it! Feel free to improve on my code if you really want to want to upgrade some functionality
+### Happy Coding :)
 
 ### Authors
 * John Aubyn  _Initial Work_ [Developer](http://aubynj.github.io)
