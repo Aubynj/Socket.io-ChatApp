@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title"
+aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Chat Bubble</title>
+  <desc>A flat styled icon from Orion Icon Library.</desc>
+  <path data-name="layer2"
+  d="M4.781 59.375l18.795-6.916a37.051 37.051 0 0 0 8.205.916c16.568 0 30-10.745 30-24s-13.432-24-30-24-30 10.745-30 24c0 6.743 3.48 12.833 9.078 17.193z"
+  fill="#a5e4f4"></path>
+  <circle data-name="layer1" cx="19.781" cy="29.375" r="2" fill="#7b8baf"></circle>
+  <circle data-name="layer1" cx="31.781" cy="29.375" r="2" fill="#7b8baf"></circle>
+  <circle data-name="layer1" cx="43.781" cy="29.375" r="2" fill="#7b8baf"></circle>
+  <circle data-name="layer1" cx="19.781" cy="29.375" r="2" fill="#7b8baf"></circle>
+  <circle data-name="layer1" cx="31.781" cy="29.375" r="2" fill="#7b8baf"></circle>
+  <circle data-name="layer1" cx="43.781" cy="29.375" r="2" fill="#7b8baf"></circle>
+  <path data-name="layer1" d="M46.823 29.333a3.042 3.042 0 0 1-3.042 3.042 3.042 3.042 0 0 1-3.042-3.042 3.042 3.042 0 0 1 3.042-3.042 3.042 3.042 0 0 1 3.042 3.042zm-12 0a3.042 3.042 0 0 1-3.042 3.042 3.042 3.042 0 0 1-3.042-3.042 3.042 3.042 0 0 1 3.042-3.042 3.042 3.042 0 0 1 3.042 3.042zm-12-.167a3.042 3.042 0 0 1-3.042 3.042 3.042 3.042 0 0 1-3.042-3.042 3.042 3.042 0 0 1 3.042-3.042 3.042 3.042 0 0 1 3.042 3.042z"
+  fill="#7b8baf"></path>
+</svg>

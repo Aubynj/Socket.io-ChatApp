@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Chat | Dashboard</title>
+</head>
+<body class="body_background">
+    <nav class="navbar custom_chat_bar">
+        <a class="navbar-brand">Chat</a>
+        <section class="form-inline">
+            <img src="/img/user.png" class="img-user mr-sm-2 img-fluid rounded" alt="">
+            <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+            <p class="my-2 my-sm-0">Hi <span id="nickname_top"></span></p>&nbsp;
+            <button class="btn btn-outline-black my-2 my-sm-0" id="logout" type="submit">Logout</button>
+        </section>
+    </nav>
+    <section class="container map_down">
+        <section class="row">
+            <section class="col-md-3 user_area_online">
+                    <div class="card" style="width: 100%;">
+                        <div class="card-header card-h">
+                          <img src="/img/online.png" class="online-img" alt="online"> <span class="bbg">Online Users</span>
+                        </div>
+                      <ul class="list-group list-group-flush" id="online-use">
+                      </ul>
+                    </div>
+            </section>
+            <section class="col-md-6">
+                <section class="row">
+                    <section class="col-md-6">
+                        <span class="head-chat">General Chat &nbsp;&nbsp;<i class="typing" id="typing_user"></i></span>        
+                    </section>
+                    <!-- <section class="col-md-3">
+                        
+                    </section> -->
+                </section>
+                <hr>
+                <section class="chat_area" id='chat-box'>
+                    <ul class="list-group" id='message-list'></ul>
+                    <ul class="list-group" id='previous-msg-title'></ul>
+                </section>
+                <form id='message-form'>
+                    <section class="form-group">
+                        <textarea id="message_box" class="form-control" placeholder="Enter message"></textarea><br>
+                        <div class="input-group-prepend">
+                            <button type="submit" class="btn btn-primary">Send Message</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span id='notify'></span>
+                        </div>
+                    </section>
+                </form>
+            </section>
+            <section class="col-md-3 log_user_area">
+                <div class="card" style="width: 100%;">
+                    <div class="card-header log-h">
+                       <span class="bbg">User Logs</span>
+                    </div>
+                  <ul class="list-group list-group-flush" id="user_log">
+                  </ul>
+                </div>
+            </section>
+        </section>
+    </section>
+    <section class="container" id="personal-mesg">
+        
+    </section>
+
+    
+
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/jquery-ui.js"></script>
+    <script src="/js/socket_controller.js"></script>
+</body>
+</html>

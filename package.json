@@ -1,0 +1,24 @@
+{
+  "name": "chatapp",
+  "version": "1.0.0",
+  "description": "A simple Chat App with NodeJS",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aubyn John",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "msql": "^1.0.3",
+    "mysql": "^2.16.0",
+    "nodemon": "^1.18.9",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}

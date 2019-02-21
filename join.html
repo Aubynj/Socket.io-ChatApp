@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat | Join Now</title>
+
+    <!-- <script src="/socket.io/socket.io.js"></script> -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <section class="container-fluid map_down_sign_up">
+        <section class="row">
+            <section class="col-md-4"></section>
+            <section class="col-md-4">
+                <h4 class="text-center color_has">Join Now</h4>
+                <form class="sign_up_form" id="sign_up_form">
+                    <section class="form-group">
+                            <input type="text" class="form-control user_form" id="nickname" placeholder="Choose a Nickname">        
+                    </section>
+                    <section class="form-group">
+                            <input type="email" class="form-control user_form" id="user_email" placeholder="Enter your Email">        
+                    </section>
+                    <section class="form-group">
+                        <input type="password" class="form-control user_form" id="user_pass" placeholder="Enter your Password">        
+                    </section>
+                    <section class="form-group">
+                        <button type="submit" class="btn btn-outline-primary btn-submit-large">Join Now</button>
+                    </section>
+                    <section class="form-group">
+                        <section class="alert" id="notify" role="alert"></section>
+                    </section>
+                    <section class="form-group">
+                        <p class="text-center">Already have an account? <a href="/">Sign In</a></p>
+                    </section>
+                    
+                </form>
+            </section>
+            <section class="col-md-4"></section>
+        </section>
+    </section>
+
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/notification.js"></script>
+    <script src="/js/controller.js"></script>
+</body>
+</html>

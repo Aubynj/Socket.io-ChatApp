@@ -1,0 +1,497 @@
+body{
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+}
+
+p{
+    font-size: 10px;
+}
+
+.map_down{
+    margin-top: 50px;
+}
+
+.user_form{
+    border-radius: 20px;
+    height: 40px;
+    font-size: 15px;
+}
+.btn-submit-large{
+    height: 40px;
+    width: 100%;
+    font-size: 20px;
+    border-radius: 20px;
+}
+.text-sm{
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+.online-users{
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+
+}
+
+.chat_area{
+    height: 360px;
+    overflow-y: scroll;
+}
+
+.map_down_sign_up{
+    margin-top: 200px;
+}
+
+.color_has{
+    color : #ccc;
+}
+
+.custom_chat_bar{
+    background-color:#2196F3;
+}
+
+.body_background{
+    background-color: #e9ecef;
+}
+
+.box-color{
+    background-color: #2196F3;
+    color: #fff;
+}
+
+.box-user{
+    color : #263238;
+}
+
+.typing{
+    /* position: absolute;
+    top: 360px;
+    right: 240px;
+    color: #37474F; */
+    font-size: 10px
+}
+/* Syntactic Sugar */
+i{
+    font-size: 10px;
+}
+
+small, #logout, span{
+    font-size: 10px;
+}
+
+.bbg{
+    font-size: 13px;
+}
+
+.head-chat{
+    font-size: 15px;
+}
+
+/* Personal Messaging */
+
+.open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: absolute;
+    bottom: 23px;
+    height: 50px;
+    /* left: 0; */
+    right: 10px;
+    width: 280px;
+}
+
+.chat-popup {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+#personal-chat-area{
+    height: 200px;
+    overflow-y: scroll;
+}
+
+.friend-list{
+    cursor: pointer;
+}
+
+
+/* Add styles to the form container */
+.form-container {
+    width: 300px;
+    padding: 10px;
+    background-color: #555;
+  }
+  
+  /* Full-width textarea */
+  .form-container .chat_personal {
+    width: 100%;
+    /* padding: 15px; */
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    resize: none;
+    min-height: 200px;
+  }
+
+  .form-container textarea {
+    max-width: 300px;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* When the textarea gets focus, do something */
+  .form-container textarea:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit/send button */
+  .form-container .btn {
+    background: transparent;
+    color:#2196F3;;
+    padding: 16px 20px;
+    border: 2px solid #2196F3;;
+    /* border: none; */
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  .form-container .btn:hover {
+    background-color:#2196F3;;
+    color : #fff;
+  }
+
+
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+
+
+
+
+
+
+
+.user_area_online, .log_user_area{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 0.4px;
+}
+
+.card-h{
+    background-color: #2196F3;
+}
+
+.log-h{
+    /* background-color:  */
+}
+
+.img-user{
+    width: 30px;
+    height: 30px;
+}
+
+.online-img{
+    width: 10px;
+    height: 10px;
+}
+.online-btn{
+    width: 8px;
+    height: 8px;
+}
+
+.online-img-user{
+    width: 30px;
+    height: 30px;
+}
+
+.btn-outline-black{
+    color : #000;
+    border-color: #000;
+}
+
+/* Chat box */
+#message-list-box{
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.box-message{
+    width: 100%;
+}
+
+.padd-lf{
+    margin-left: 40px;
+}
+
+/* SVG */
+.svg-big{
+    width: 150px;
+    height: 150px;
+}
+
+#my-svg-animate{
+    width: 50%;
+}
+
+.svg_animation{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+svg:hover { 
+    transform: scale(1.35); 
+    transition-duration: 1.5s;
+}
+
+svg{
+    transition-duration: 1.5s;
+}
+
+#circle-first {
+    /* animation: fadeOut 5s infinite linear; */
+    -webkit-animation: flickerAnimation 1s infinite;
+   -moz-animation: flickerAnimation 1s infinite;
+   -o-animation: flickerAnimation 1s infinite;
+    animation: flickerAnimation 1s infinite;
+}
+
+/* .circle-second {
+    animation: fadeOut 5s infinite linear;
+    -webkit-animation: flickerAnimation 1s infinite;
+   -moz-animation: flickerAnimation 1s infinite;
+   -o-animation: flickerAnimation 1s infinite;
+    animation: flickerAnimation 1s infinite;
+}
+
+.circle-third {
+    animation: fadeOut 5s infinite linear;
+    -webkit-animation: flickerAnimation 1s infinite;
+   -moz-animation: flickerAnimation 1s infinite;
+   -o-animation: flickerAnimation 1s infinite;
+    animation: flickerAnimation 1s infinite;
+} */
+
+@keyframes flickerAnimation {
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-o-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+
+
+
+
+
+.heart-loader {
+    /* position: absolute; */
+    display: block;
+    
+    width: 180px;
+    height: 180px;
+    overflow: visible;
+}
+
+.heart-loader__group {
+    -webkit-transform-origin: 0 90px;
+    transform-origin: 0 90px;
+    -webkit-animation: group-anim 7s 1s ;
+    animation: group-anim 7s 1s ;
+}
+
+.heart-loader__square {
+    stroke: #B8B8B8;
+    stroke-dasharray: 240, 240;
+    stroke-dashoffset: 240;
+    -webkit-animation: square-anim 7s 1s ;
+    animation: square-anim 7s 1s ;
+}
+
+.heart-loader__circle.m--left {
+    -webkit-animation: left-circle-anim 7s 1s ;
+    animation: left-circle-anim 7s 1s ;
+}
+
+.heart-loader__circle {
+    stroke: #B8B8B8;
+    stroke-dasharray: 188.522, 188.522;
+    stroke-dashoffset: 188.522;
+    -webkit-transform-origin: 60px 30px;
+    transform-origin: 60px 30px;
+}
+
+.heart-loader__circle.m--right {
+    -webkit-animation: right-circle-anim 7s 1s ;
+    animation: right-circle-anim 7s 1s ;
+}
+
+.heart-loader__heartPath {
+    stroke: #E21737;
+    fill: transparent;
+    stroke-dasharray: 308.522, 308.522;
+    stroke-dashoffset: 308.522;
+    -webkit-animation: heart-anim 7s 1s ;
+    animation: heart-anim 7s 1s ;
+}
+
+@keyframes left-circle-anim {
+    12% {
+        stroke-dashoffset: 188.522;
+    }
+    31% {
+        stroke-dashoffset: 0;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    41% {
+        stroke-dashoffset: 0;
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+    43% {
+        stroke-dashoffset: 0;
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+        opacity: 1;
+    }
+    85% {
+        stroke-dashoffset: 0;
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    
+}
+
+@keyframes group-anim {
+    43% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    54% {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    90% {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        opacity: 1;
+    }
+    97% {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        opacity: 1;
+    }
+}
+
+@keyframes square-anim {
+    12% {
+        stroke-dashoffset: 0;
+    }
+    43% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+    85% {
+        stroke-dashoffset: 0;
+        opacity: 0;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        opacity: 0;
+    }    
+}
+
+@keyframes right-circle-anim{
+    12% {
+        stroke-dashoffset: 188.522;
+    }
+    31% {
+        stroke-dashoffset: 0;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    41% {
+        stroke-dashoffset: 0;
+        -webkit-transform: translateX(30px);
+        transform: translateX(30px);
+    }
+    43% {
+        stroke-dashoffset: 0;
+        -webkit-transform: translateX(30px);
+        transform: translateX(30px);
+        opacity: 1;
+    }
+    85% {
+        stroke-dashoffset: 0;
+        -webkit-transform: translateX(30px);
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        -webkit-transform: translateX(30px);
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    
+}
+
+@keyframes heart-anim {
+    55% {
+        stroke-dashoffset: 308.522;
+        fill: transparent;
+    }
+    70% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+    }
+    87% {
+        stroke-dashoffset: 0;
+        fill: #E21737;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        fill: #E21737;
+    }
+}
