@@ -8,11 +8,11 @@ const mysql = require("mysql")
 
 const connect = mysql.createConnection({
     connectionLimit : 100,
-    host : "fdb17.runhosting.com",
+    host : "remotemysql.com",
     port     :  3306,
-    user : "2381642_codexmusik",
-    password : "Programming!@1",
-    database : "2381642_codexmusik"
+    user : "bVdoU1E9sL",
+    password : "vNk1cxZnNL",
+    database : "bVdoU1E9sL"
 });
 
 

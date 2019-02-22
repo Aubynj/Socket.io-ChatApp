@@ -121,7 +121,7 @@ module.exports =  (socket) => {
             if (sender != users[i]){
                 if (users[i] < sender) {
                     room = users[i]+'_'+sender
-                    con.query('SELECT nickname,message_body,time_sent FROM messages INNER JOIN chatusers on chatusers.user_id = messages.user_id WHERE group_name = ?',
+                    con.query('SELECT nickname,message_body,time_sent FROM messages INNER JOIN users on users.user_id = messages.user_id WHERE group_name = ?',
                     [room], (err, rows, fields) => {
                         // console.log(rows)
                         if (rows.length > 0) {
@@ -130,7 +130,7 @@ module.exports =  (socket) => {
                     })
                 }else{
                     room = sender+'_'+users[i]
-                    con.query('SELECT nickname,message_body,time_sent FROM messages INNER JOIN chatusers on chatusers.user_id = messages.user_id WHERE group_name = ?',
+                    con.query('SELECT nickname,message_body,time_sent FROM messages INNER JOIN users on users.user_id = messages.user_id WHERE group_name = ?',
                     [room], (err, rows, fields) => {
                         // console.log(rows)
                         if (rows.length > 0) {
@@ -154,7 +154,7 @@ module.exports =  (socket) => {
 
     // Getting previous group messages for conversation to proceed
     function showPreviousGroupMessage(room, con) {
-        con.query('SELECT nickname,message_body,time_sent FROM messages INNER JOIN chatusers on chatusers.user_id = messages.user_id WHERE group_name = ?',
+        con.query('SELECT nickname,message_body,time_sent FROM messages INNER JOIN users on users.user_id = messages.user_id WHERE group_name = ?',
         [room], (err, rows, fields) => {
             if (rows.length > 0) {
                 socket.emit(EVENTS.HISTORY, {data_messages: rows, title : 'Previous Messages'})
@@ -180,7 +180,7 @@ module.exports =  (socket) => {
 
     // Using the Async mysql, we are getting user_id with a callback
     function getUserId(user, callback){
-        con.query('SELECT * FROM chatusers WHERE nickname = ?', [user], (err, rows, fields)=>{
+        con.query('SELECT * FROM users WHERE nickname = ?', [user], (err, rows, fields)=>{
             if (rows.length != 0){
                 callback({user_id : rows[0].user_id})
             }

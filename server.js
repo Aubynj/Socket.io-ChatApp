@@ -77,7 +77,7 @@ app.post("/sign_in", (req, res) => {
     let password = req.body.password
     console.log(con)
     // check if email and password exist
-    con.query("SELECT * FROM chatusers WHERE email = ?", [email], function(err, rows, fields){
+    con.query("SELECT * FROM users WHERE email = ?", [email], function(err, rows, fields){
         if (rows.length != 0){
             let hash = rows[0].pass_word
             if(bcrypt.compareSync(password, hash)) {
@@ -126,7 +126,7 @@ app.post("/sign_up", (req, res) => {
             }
         }else{
             // Insert into MYSQL DB
-            con.query("INSERT INTO chatusers(nickname, email, pass_word, date_creation) VALUES (?, ?, ?, ?)", [nickname, email, hash, date], function(err, rows, fields){
+            con.query("INSERT INTO users(nickname, email, pass_word, date_creation) VALUES (?, ?, ?, ?)", [nickname, email, hash, date], function(err, rows, fields){
                 if (err) throw err
                 res.send({"code":200,success:true, message:"Account created Successfully. Login now"})
             })
@@ -138,7 +138,7 @@ app.post("/sign_up", (req, res) => {
 // Functions to check if nickname and email exist in mysql db
 function checkEmailAndNickname(email, nick, con, callback) {
     // Connect to mysql DB
-    con.query("SELECT * FROM chatusers WHERE email = ? or nickname = ?", [email, nick], function(err, rows, fields){
+    con.query("SELECT * FROM users WHERE email = ? or nickname = ?", [email, nick], function(err, rows, fields){
         if (rows.length != 0){
             callback({data : true, details : rows})
         }else{
