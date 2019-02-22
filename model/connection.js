@@ -17,10 +17,10 @@ const connect = mysql.createConnection({
 
 
 connect.connect(function(err, success) {
-    if (err) {
-      console.error('error connecting: ' + err.stack);
-      return;
-    }
+    // if (err) {
+    //   console.error('error connecting: ' + err.stack);
+    //   return;
+    // }
     if (success){
         console.log(success)
     }

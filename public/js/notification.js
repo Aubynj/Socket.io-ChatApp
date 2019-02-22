@@ -13,6 +13,7 @@ function notificationAction(text, check){
         $(".icon-message").addClass("fa-times-circle").removeClass("fa-check-circle-o").css({'color':'#721c24','font-size':'18px'});
 
     }else if(check === "progress"){
+        $("#notify").html(text);
         $("#notify").addClass("alert-info").removeClass("alert-success alert-danger");
     }
 }
