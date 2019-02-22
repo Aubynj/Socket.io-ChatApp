@@ -8,7 +8,7 @@ const mysql = require("mysql")
 
 const connect = mysql.createConnection({
     connectionLimit : 100,
-    host : "fdb17.biz.nf",
+    host : "fdb17.runhosting.com",
     port     :  3306,
     user : "2381642_codexmusik",
     password : "Programming!@1",
