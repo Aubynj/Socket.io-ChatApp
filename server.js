@@ -75,7 +75,7 @@ app.post("/sign_in", (req, res) => {
     sessionApp = req.session
     let email = req.body.email
     let password = req.body.password
-    
+    console.log(con)
     // check if email and password exist
     con.query("SELECT * FROM chatusers WHERE email = ?", [email], function(err, rows, fields){
         if (rows.length != 0){
