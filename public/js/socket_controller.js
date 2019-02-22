@@ -183,7 +183,9 @@ $(function(){
 
     // Socket event to get private chat from to the receiver
     socket.on('PERSONAL_RECEIVED', (data) => {
-        // console.log(data)
+        var count = 0
+        count += 1
+        console.log(count)
         var template  = ''
         var newD
         var cur = new Date()
@@ -195,6 +197,7 @@ $(function(){
             newD = data.date.toString().slice(16, -3).trim()
         }
         if (username != data.user) {
+            $(".bad-"+data.room).html('<span class="badge badge-pill badge-danger">'+count+'</span>')
             template += '<li class="list-group-item box-color" id="message-list-box">' +
                             '<div class="d-flex w-100 justify-content-between">'+
                                 '<h6 class="mb-1"><i>'+data.user+'</i></h6> '+'<small>'+newD+'</small>'+
@@ -251,14 +254,15 @@ $(function(){
 })
 
 // Function to get the personal section chat to open
-function openForm(recv) {
-    var id = "myForm_"+recv
+function openForm(room) {
+    var id = "myForm_"+room
     document.getElementById(id).style.display = "block";
+    $(".bad-"+room).html('')
 }
   
 // Function to get the close form for personal chat
-function closeForm(recv) {
-    var id = "myForm_"+recv
+function closeForm(room) {
+    var id = "myForm_"+room
     document.getElementById(id).style.display = "none";
 }
  
@@ -279,13 +283,13 @@ function startPrivateMessage(to, from=username, soc=socket) {
     $('#personal-mesg').append(
         $(
             '<div id="message-draggable_'+to+'">'+
-                '<div class="chat-popup" id="myForm_'+to+'">'+
+                '<div class="chat-popup" id="myForm_'+room+'">'+
                     '<div class="form-container">'+
                     '<section class="card">'+
                         '<div class="card-header">'+
                         '<span id="on-off-msg-'+to+'"><img src="/img/online.png" class="online-btn" alt="online"></span>'+
                         '    <span>'+to+'</span>'+
-                        '    <button type="button" class="close" aria-label="Close" onclick="closeForm(\''+to+'\')">'+
+                        '    <button type="button" class="close" aria-label="Close" onclick="closeForm(\''+room+'\')">'+
                         '        <span aria-hidden="true">&times;</span>'+
                         '    </button>'+
                         '    <span id="personal-out-typ-'+to+'"></span>'+
@@ -304,7 +308,8 @@ function startPrivateMessage(to, from=username, soc=socket) {
                         '<!-- <button type="button" class="btn cancel" onclick="closeForm()">Close</button> -->'+
                     '</div>'+
                 '</div>'+
-                '<div  class="btn btn-primary open-button" id="dragmeover" onclick="openForm(\''+to+'\')">'+
+                '<div  class="btn btn-primary open-button" id="dragmeover" onclick="openForm(\''+room+'\')">'+
+                '<span class="bad-'+room+'"></span>&nbsp;&nbsp;'+
                 '<span id="on-off-'+to+'"><img src="/img/online.png" class="online-btn" alt="online"></span> &nbsp;'+
                     to+
                 '    <span id="personal-bin-typ-'+to+'"></span>'+

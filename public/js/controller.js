@@ -21,6 +21,7 @@ $(function(){
         if (email === "" || password === ""){
             notificationAction("Email and Password is required", "error")
         } else {
+            notificationAction("Connecting to server...", "progress")
             let credentials = $.param({ email : email, password : password});
 
             $.post(SERVER_URL.SIGN_IN_URL, credentials, function(response){
@@ -56,6 +57,7 @@ $(function(){
         if (nickname === "" || email === "" || password === ""){
             notificationAction("All fields are required", "error")            
         } else {
+            notificationAction("Connecting to server...", "progress")
 
             $.post(SERVER_URL.SIGN_UP_URL, data, function(response){
                 console.log(response)
