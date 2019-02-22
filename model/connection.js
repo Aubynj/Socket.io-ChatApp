@@ -7,10 +7,10 @@
 const mysql = require("mysql")
 
 const connect = mysql.createConnection({
-    host : "localhost",
-    user : "root",
-    password : "",
-    database : "chatapp"
+    host : "fdb17.biz.nf",
+    user : "2381642_codexmusik",
+    password : "Programming!@1",
+    database : "2381642_codexmusik"
 });
 
 module.exports = connect
