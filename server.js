@@ -150,5 +150,5 @@ function checkEmailAndNickname(email, nick, con, callback) {
 function getCurrentDateAndTime(){
     let date = new Date()
     let getTime = new Date(date.getTime())
-    return getTime.toString().slice(0, -14).trim()
+    return getTime.toString().slice(0, 25).trim()
 }
