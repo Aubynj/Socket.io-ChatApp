@@ -64,6 +64,9 @@ $(function(){
                 if (response.success) {
                     notificationAction(response.message, "success")
                     $("#sign_up_form")[0].reset()
+                    setTimeout(function(){
+                        window.location.href = '/'
+                    }, 2000)
                 }else{
                     notificationAction(response.message, "error")
                 }
