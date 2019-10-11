@@ -7,6 +7,8 @@ Socket.IO enables real-time bidirectional event-based communication. It consists
 * [Javascript client library](https://github.com/socketio/socket.io-client) for the browser (or a Node.js client)
 
 ## Final Work
+Deploy on Heroku. Check it out [here](https://sleekchat.herokuapp.com/)
+
 Signing Page
 ![alt text](https://github.com/Aubynj/Socket.io-ChatApp/blob/master/public/img/image1.png)
 
